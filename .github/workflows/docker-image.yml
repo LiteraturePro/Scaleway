@@ -17,4 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/flask:latest
+        docker login rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy -u nologin -p ${{ secrets.DEPLOY_TOKEN }}
         docker push rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/flask:latest
