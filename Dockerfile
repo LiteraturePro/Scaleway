@@ -9,6 +9,7 @@ EXPOSE 8080
 
 # Install libraries
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install -qr requirements.txt
 COPY server.py .
 
