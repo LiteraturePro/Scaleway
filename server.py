@@ -3,6 +3,8 @@ import os
 import json
 
 DEFAULT_PORT = "8080"
+
+
 MESSAGE = "Hello, World from Scaleway Container !"
 
 app = Flask(__name__)
