@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
-        docker build -t flask . 
-        docker tag flask:latest rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/flask:latest
+        docker pull jaydenlee2019/mynodequery:latest
+        docker tag jaydenlee2019/mynodequery:latest rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/mynodequery:latest
         docker login rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy -u nologin -p ${{ secrets.DEPLOY_TOKEN }}
-        docker push rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/flask:latest
+        docker push rg.fr-par.scw.cloud/funcscwscalewayaiynf5hy/mynodequery:latest
